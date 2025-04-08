@@ -8,16 +8,28 @@
   <meta name="author" content="Noureddine El-Asri">
   <style>
     
-     body {
+:root {
+      --background-color: #f8f9fa;
+      --text-color: #212529;
+    }
+
+    .dark-mode {
+      --background-color: #212529;
+      --text-color: #f8f9fa;
+    }
+
+    body {
       font-family: 'Arial', sans-serif;
       max-width: 800px;
       margin: 0 auto;
       padding: 2rem;
       line-height: 1.6;
-      background-color: #f8f9fa;
-      color: #212529;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
       position: relative;
     }
+
     .background {
       position: fixed;
       top: 0;
@@ -27,19 +39,27 @@
       background: url('pavageC5.svg') no-repeat center center fixed;
       background-size: cover;
       filter: blur(5px);
-      opacity : 0.1 ;
+      opacity: 0.1;
       z-index: -1;
     }
+
     header {
       text-align: center;
       margin-bottom: 2rem;
     }
-    img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    button#theme-toggle {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button#theme-toggle:hover {
+      background-color: #004999;
     }
     h1, h2 {
       margin: 1rem 0 0.5rem;
@@ -89,6 +109,8 @@
   </style>
 </head>
 <body>
+    <button id="theme-toggle">Switch to dark Sasuki</button>
+    
   <div class="background"></div>
   <div class="triangle"></div>
   <header>
@@ -200,5 +222,29 @@
     &copy; <b>2025 Noureddine El-Asri</b>
   </footer>
   
+  <script>
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Check saved theme on page load
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      themeToggleButton.textContent = 'Switch to Light Mode';
+    }
+
+    // Add event listener to toggle button
+    themeToggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+
+      // Update button text and save preference
+      if (body.classList.contains('dark-mode')) {
+        themeToggleButton.textContent = 'Switch to Light Mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        themeToggleButton.textContent = 'Switch to Dark Mode';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
 </body>
 </html>
