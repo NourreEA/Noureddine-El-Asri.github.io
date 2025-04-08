@@ -32,59 +32,62 @@
       color: #0066cc;
       text-decoration: none;
     }
-    nav {
-      margin-top: 1rem;
-    }
     section {
-      margin-top: 3rem;
+      margin-bottom: 2rem;
     }
-    a:hover {
-      text-decoration: underline;
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
     }
-    .cv-link {
+    .button {
       display: inline-block;
       margin-top: 1rem;
       padding: 0.5rem 1rem;
       background-color: #0066cc;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
-    }
-    .cv-link:hover {
-      background-color: #0052a3;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <img src="meee.jpeg" alt="Photo de Noureddine El Asri">
+    <h1>Noureddine El Asri</h1>
+    <p>Doctorant en cryptographie et codes quantiques</p>
+    <nav>
+      <a href="#recherche">Recherche</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+      <a href="cv.pdf" target="_blank">CV</a>
+    </nav>
+  </header>
 
-<header>
-  <img src="meee.jpeg" alt="Photo de Noureddine El Asri"> 
-  <h1>Noureddine El Asri</h1>
-  <p>Doctorant en cryptographie</p>
-  <nav>
-    <a href="#recherche">Recherche</a>
-    <a href="#publications">Publications</a>
-    <a href="#cv">CV</a>
-  </nav>
-</header>
+  <section id="recherche">
+    <h2>Recherche</h2>
+    <p>Je travaille actuellement sur les codes correcteurs d’erreurs quantiques, en particulier les codes LDPC quantiques. Mes intérêts incluent la cryptographie post-quantique, les fonctions APN, et l’algèbre appliquée à la sécurité de l’information.</p>
+  </section>
 
-<section id="recherche">
-  <h2>Recherche</h2>
-  <p>Je suis doctorant spécialisé en cryptographie à base de codes, avec un intérêt particulier pour les fonctions APN en caractéristique impaire et les codes LDPC quantiques.</p>
-</section>
+  <section id="publications">
+    <h2>Publications</h2>
+    <ul>
+      <li>À venir...</li>
+    </ul>
+  </section>
 
-<section id="publications">
-  <h2>Publications</h2>
-  <ul>
-    <li>Article 1 – <a href="https://lien-vers-article1">PDF</a></li>
-    <li>Article 2 – <a href="https://lien-vers-article2">PDF</a></li>
-  </ul>
-</section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Vous pouvez me contacter via :</p>
+    <ul>
+      <li>Email : <a href="mailto:votre.email@exemple.com">votre.email@exemple.com</a></li>
+      <li><a href="https://github.com/NourreEA" target="_blank">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/votreprofil" target="_blank">LinkedIn</a></li>
+    </ul>
+  </section>
 
-<section id="cv">
-  <h2>CV</h2>
-  <a href="cv.pdf" class="cv-link" target="_blank">Télécharger mon CV</a>
-</section>
-
+  <footer>
+    &copy; 2025 Noureddine El Asri
+  </footer>
 </body>
 </html>
