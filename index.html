@@ -75,12 +75,12 @@
     h1, h2 {
       margin: 1rem 0 0.5rem;
       padding: 10px;
-      background-color: #e0e0e0; /* Light grey background */
-      color: #333; /* Dark text color */
-      border-radius: 5px; /* Rounded corners */
-      display: block; /* Make the title span the full width */
-      width: calc(100% + 4rem); /* Ensure it spans the full width including padding */
-      margin-left: -2rem; /* Align the title with the body padding */
+      background-color: #e0e0e0; 
+      color: #333; 
+      border-radius: 5px; 
+      display: block; 
+      width: calc(100% + 4rem); 
+      margin-left: -2rem; 
     }
     nav a {
       margin: 0 1rem;
@@ -110,12 +110,12 @@
       text-decoration: underline;
     }
     .bullet-before::before {
-      content: "\2022"; /* Unicode for bullet point */
-      font-size: 2rem; /* Increase the size of the bullet point */
+      content: "\2022"; 
+      font-size: 2rem; 
       vertical-align: middle;
       display: inline-block;
       margin-right: 0.5rem;
-      color: #0066cc; /* Color of the bullet point */
+      color: #0066cc; 
     }
   </style>
   
@@ -225,17 +225,17 @@
     const themeToggleButton = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Check saved theme on page load
+    
     if (localStorage.getItem('theme') === 'dark') {
       body.classList.add('dark-mode');
       themeToggleButton.textContent = 'Switch to Light Mode';
     }
 
-    // Add event listener to toggle button
+    
     themeToggleButton.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
 
-      // Update button text and save preference
+      
       if (body.classList.contains('dark-mode')) {
         themeToggleButton.textContent = 'Switch to Light Mode';
         localStorage.setItem('theme', 'dark');
