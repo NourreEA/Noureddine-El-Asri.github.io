@@ -20,7 +20,14 @@
       --background-color: #212529;
       --text-color: #f8f9fa;
     }
-
+    @keyframes droitegauche {
+      0%    {left: 0px;}
+      25%   {left: 20px;}
+      50%   {left: 0px;}
+      75%   {left: -20px;}
+      100%  {left: 0px;}
+    }
+    
     body {
       font-family: 'Arial', sans-serif;
       max-width: 800px;
@@ -66,11 +73,18 @@
     }
 
     img {
+      position: relative;
       width: 150px;
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);}
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      animation: droitegauche;
+      animation-duration: 4s;
+      animation-timing-function: ease ;
+      animation-delay: 4s;
+      animation-iteration-count: infinite;
+    }
 
     h1, h2 {
       margin: 1rem 0 0.5rem;
